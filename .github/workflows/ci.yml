@@ -25,7 +25,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Ensure README files match
-    - run: |
+      run: |
         diff ./README.md ./lib/README.md
     - name: Prepare demo-app
       run: |
