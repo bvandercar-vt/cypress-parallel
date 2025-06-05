@@ -75,22 +75,22 @@ cypress-parallel -s cy:run -t 2 -a '\"<your-cypress-cmd-args>\"' --spec path/to/
 
 ### Scripts options
 
-| Option            | Alias | Description                        | Type   |
-| ----------------- | ----- | ---------------------------------- | ------ |
-| --help            |       | Show help                          |        |
-| --version         |       | Show version number                |        |
-| --script          | -s    | Your npm Cypress command           | string |
-| --args            | -a    | Your npm Cypress command arguments | string |
-| --threads         | -t    | Number of threads                  | number |
-| --specsDir        | -d    | Cypress specs directory            | string |
-| --spec            |       | Cypress spec file paths            | string |
-| --weightsJson     | -w    | Parallel weights json file         | string |
-| --reporter        | -r    | Reporter to pass to Cypress.       | string |
-| --reporterOptions | -o    | Reporter options                   | string |
-| --reporterModulePath | -n    | Specify the reporter module path   | string |
-| --bail            | -b    | Exit on first failing thread       | string |
-| --verbose         | -v    | Some additional logging            | string |
-| --strictMode      | -m    | Add stricter checks after running the tests           | boolean |
+| Option               | Alias | Description                                 | Type    | Default                                                                  |
+| -------------------- | ----- | ------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| --help               |       | Show help                                   |         |
+| --version            |       | Show version number                         |         |
+| --script             | -s    | Your npm Cypress command (required)         | string  |
+| --args               | -a    | Your npm Cypress command arguments          | string  |
+| --threads            | -t    | Number of threads                           | number  | 2                                                                        |
+| --specsDir           | -d    | Cypress specs directory                     | string  | 'cypress/e2e' (cy version 10+) or 'cypress/integration' (cy version <10) |
+| --spec               |       | Cypress spec file paths                     | string  |
+| --weightsJson        | -w    | Parallel weights json file                  | string  | 'cypress/parallel-weights.json'                                          |
+| --reporter           | -r    | Reporter to pass to Cypress.                | string  |
+| --reporterOptions    | -o    | Reporter options                            | string  |
+| --reporterModulePath | -n    | Specify the reporter module path            | string  | 'cypress-multi-reporters'                                                |
+| --bail               | -b    | Exit on first failing thread                | string  | false                                                                    |
+| --verbose            | -v    | Some additional logging                     | string  | false                                                                    |
+| --strictMode         | -m    | Add stricter checks after running the tests | boolean | true                                                                     |
 
 **NB**: If you use *cypress-cucumber-preprocesor*, please **disable** the *strictMode* to avoid possible errors:
 
